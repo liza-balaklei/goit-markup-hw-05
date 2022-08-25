@@ -18,6 +18,11 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body>
@@ -30,7 +35,7 @@
         <nav class="header-nav">
           <ul class="header-list list">
             <li class="item">
-              <a href="./studio.html" class="list-link">Студія</a>
+              <a href="./index.html" class="list-link">Студія</a>
             </li>
             <li class="item">
               <a href="./portfolio.html" class="list-link">Портфоліо</a>
@@ -39,16 +44,20 @@
           </ul>
         </nav>
         <div class="header-contacts">
-          <svg class="contacts-icon" width="16" height="12">
-            <use href="./images/icons.svg#icon-message"></use>
-          </svg>
-          <a class="header-mail" href="mailto:info@devstudio.com"
-            >info@devstudio.com</a
-          >
-          <svg class="contacts-icon" width="16" height="12">
-            <use href="./images/icons.svg#icon-smartphone"></use>
-          </svg>
-          <a class="header-tel" href="tel:+380961111111">+38 096 111 11 11</a>
+          <div class="header-cont">
+            <a href="mailto:info@devstudio.com" class="header-connect">
+              <svg class="contacts-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-message"></use></svg
+              >info@devstudio.com</a
+            >
+          </div>
+          <div class="header-cont">
+            <a href="tel:+380961111111" class="header-connect">
+              <svg class="contacts-icon" width="16" height="12">
+                <use href="./images/icons.svg#icon-smartphone"></use></svg
+              >+38 096 111 11 11</a
+            >
+          </div>
         </div>
       </div>
     </header>
@@ -58,7 +67,9 @@
       <section class="hero">
         <div class="container hero-wrap">
           <h1 class="hero-item">Ефективні рішення для вашого бізнесу</h1>
-          <button class="hero-btn" type="button">Замовити послугу</button>
+          <button class="hero-btn" type="button" data-modal-open>
+            Замовити послугу
+          </button>
         </div>
       </section>
 
@@ -69,9 +80,12 @@
           <h2>Особливості</h2>
           <ul class="features-list list">
             <li class="features-item">
-              <svg class="features-icon" width="70" height="70">
-                <use href="./images/icons.svg#icon-antenna"></use>
-              </svg>
+              <div class="item-icon">
+                <svg class="features-icon" width="70" height="70">
+                  <use href="./images/icons.svg#icon-antenna"></use>
+                </svg>
+              </div>
+
               <h3 class="features-name">УВАГА ДО ДЕТАЛЕЙ</h3>
               <p class="features-text">
                 Ідейні міркування, і навіть початок повсякденної роботи з
@@ -79,12 +93,15 @@
               </p>
             </li>
             <li class="features-item">
-              <svg class="features-icon" width="70" height="70">
-                <use
-                  class="features-icon-img"
-                  href="./images/icons.svg#icon-clock"
-                ></use>
-              </svg>
+              <div class="item-icon">
+                <svg class="features-icon" width="70" height="70">
+                  <use
+                    class="features-icon-img"
+                    href="./images/icons.svg#icon-clock"
+                  ></use>
+                </svg>
+              </div>
+
               <h3 class="features-name">ПУНКТУАЛЬНІСТЬ</h3>
               <p class="features-text">
                 Завдання організації, особливо рамки і місце навчання кадрів
@@ -92,18 +109,24 @@
               </p>
             </li>
             <li class="features-item">
-              <svg class="features-icon" width="70" height="70">
-                <use href="./images/icons.svg#icon-diagram"></use>
-              </svg>
+              <div class="item-icon">
+                <svg class="features-icon" width="70" height="70">
+                  <use href="./images/icons.svg#icon-diagram"></use>
+                </svg>
+              </div>
+
               <h3 class="features-name">ПЛАНУВАННЯ</h3>
               <p class="features-text">
                 Так само консультація з широким активом значною мірою зумовлює.
               </p>
             </li>
             <li class="features-item">
-              <svg class="features-icon" width="70" height="70">
-                <use href="./images/icons.svg#icon-astronaut"></use>
-              </svg>
+              <div class="item-icon">
+                <svg class="features-icon" width="70" height="70">
+                  <use href="./images/icons.svg#icon-astronaut"></use>
+                </svg>
+              </div>
+
               <h3 class="features-name">СУЧАСНІ ТЕХНОЛОГІЇ</h3>
               <p class="features-text">
                 Значимість цих проблем настільки очевидна, що реалізація
@@ -127,6 +150,7 @@
                 alt="Діяльність"
                 width="370"
               />
+              <p class="activity-list-above">Десктопні додатки</p>
             </li>
             <li class="activity-item">
               <img
@@ -135,6 +159,7 @@
                 alt="Діяльність"
                 width="370"
               />
+              <p class="activity-list-above">Мобільні додатки</p>
             </li>
             <li class="activity-item">
               <img
@@ -143,6 +168,7 @@
                 alt="Діяльність"
                 width="370"
               />
+              <p class="activity-list-above">Дизайнерські рішення</p>
             </li>
           </ul>
         </div>
@@ -371,7 +397,7 @@
           <li class="clients-member">
             <a href="" class="clients-link">
               <svg class="member-logo" width="106" height="60">
-                <use href="./images/icons.svg#icon-Logo-6"></use>
+                <use href="./images/icons.svg#icon--6"></use>
               </svg>
             </a>
           </li>
@@ -435,5 +461,20 @@
         </div>
       </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="modal-close-img" width="18" height="18">
+            <use href="./images/icons.svg#icon-modal-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
